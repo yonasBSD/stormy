@@ -44,30 +44,34 @@ partly because I enjoy building clean CLI tools.
 - Compact display mode
 - Works out of the box with OpenMeteo
 
+---
+
 ## Installation
+
+[![Packaging status](https://repology.org/badge/vertical-allrepos/stormy.svg)](https://repology.org/project/stormy/versions)
+
+### AUR
+
+```bash
+yay -S stormy
+```
+
+### FreeBSD
+
+```bash
+pkg install stormy
+```
+
+### Homebrew
+
+```bash
+brew install stormy
+```
 
 ### Nix
 
-#### One-time run
-
-```bash
-nix run github:ashish0kumar/stormy -- --city "London"
-```
-
-#### Permanent installation
-
 ```bash
 nix profile install github:ashish0kumar/stormy#stormy
-```
-
-#### Add to your system configuration (using flakes)
-
-```bash
-# In your flake.nix
-inputs.stormy.url = "github:ashish0kumar/stormy";
-
-# In your system or home-manager configuration
-environment.systemPackages = [ inputs.stormy.packages.x86_64-linux.stormy ];
 ```
 
 ### Via `go install`
@@ -89,6 +93,8 @@ go build
 # Move to a directory in your PATH
 sudo mv stormy /usr/local/bin/
 ```
+
+---
 
 ## Configuration
 
@@ -139,6 +145,8 @@ live_mode = false
 compact = false
 ```
 
+---
+
 ## Usage
 
 ```bash
@@ -161,12 +169,16 @@ stormy --version
 stormy --help
 ```
 
+---
+
 ## Display Examples
 
 | ![Base](./assets/base.png)       | ![Colored](./assets/colored.png)    |
 |----------------------------------|-------------------------------------|
 | ![Minimal](./assets/minimal.png) | ![1](./assets/1.png) |
 | ![4](./assets/4.png)             | ![3](./assets/3.png)                |
+
+---
 
 ## Acknowledgements
 
